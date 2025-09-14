@@ -1,16 +1,12 @@
-# QCM Résidanat — Fixed Enhanced FR
+# QCM Résidanat — Version Finale FR
 
-Cette version corrige les problèmes signalés:
-- Génération de QCM (AI si clé présente) ou fallback
-- Selectbox pour modules/chapitres (liste étendue ; possibilité de module personnalisé)
-- QCM interactifs: sélection par clic, possibilité d'afficher ou masquer corrections
-- Examen blanc: chrono, sélection par clic, bouton Soumettre pour correction globale
-- Bank local (qcm_bank.json) et dashboard
+Cette version est finale, française uniquement, avec :
+- Génération de QCM via OpenAI (API key requise)
+- QCM interactives avec choix par clic et correction optionnelle
+- Examen blanc avec chronomètre et correction globale
+- Bank local (qcm_bank.json) et dashboard avec statistiques
+- Interface adaptée pour mobile et desktop
 
-## Installation locale
+## Installation
 1. `pip install -r requirements.txt`
 2. `streamlit run app.py`
-
-## Déploiement
-- Poussez ce repo sur GitHub et déployez avec Streamlit Cloud.
-- Pour activer l'AI: ajout du secret `OPENAI_API_KEY` dans Streamlit Cloud.
