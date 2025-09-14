@@ -1,6 +1,12 @@
 import streamlit as st
-from qcm.generator import generate_qcms
 import pandas as pd
+
+# Import sécurisé pour éviter crash si qcm n'est pas trouvé
+try:
+    from qcm.generator import generate_qcms
+except ModuleNotFoundError:
+    def generate_qcms(*args, **kwargs):
+        return []
 
 st.set_page_config(page_title="Générateur QCM - Résidanat", layout="wide")
 
@@ -14,4 +20,9 @@ with st.form("params"):
     submitted = st.form_submit_button("Générer")
 
 if submitted:
-    st.write("⚠️ Placeholder : branchement IA non encore implémenté")
+    qcms = generate_qcms(subject=subject, n=n, level=level)
+    if not qcms:
+        st.warning("⚠️ Placeholder : IA non encore branchée")
+    else:
+        st.success(f"{len(qcms)} QCM générés.")
+        st.dataframe(pd.DataFrame(qcms))
