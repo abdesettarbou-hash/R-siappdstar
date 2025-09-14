@@ -1,15 +1,17 @@
-Résidanat QCM Simulator - Prototype
-==================================
+# Résidanat QCM App
 
-هذا أرشيف يحتوي على prototype لتطبيق Streamlit يقوم بتوليد ومحاكاة QCM، تسجيل النتائج، وdashboard تحليلي.
-ملاحظة: يجب إدخال مفتاح OpenAI API لتمكين وظائف التوليد والتصحيح والتحليلات النصية.
+Application Streamlit pour :  
+- Générer des QCM de résidanat via OpenAI  
+- Suivre et projeter les résultats des révisions  
 
-ملفّات:
-- app.py: التطبيق الرئيسي (Streamlit)
-- requirements.txt: الحزم المطلوبة
-- README.md: هذه التعليمات
+## Utilisation locale
+1. `pip install -r requirements.txt`  
+2. `streamlit run app.py`  
 
-تشغيل سريع:
-1. تثبيت الحزم: `pip install -r requirements.txt`
-2. ضبط المتغير البيئي OPENAI_API_KEY (اختياري لكن مطلوب للـAI)
-3. تشغيل: `streamlit run app.py`
+## Déploiement (Streamlit Cloud)
+- Hébergez ce repo sur [Streamlit Cloud](https://streamlit.io/cloud).  
+- Ajoutez votre clé OpenAI dans **Settings → Secrets** :  
+
+```toml
+OPENAI_API_KEY="votre_clef"
+```  
