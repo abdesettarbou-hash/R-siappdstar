@@ -1,12 +1,23 @@
-# QCM Résidanat — Version Finale FR
+# Résidanat QCM Generator
 
-Cette version est finale, française uniquement, avec :
-- Génération de QCM via OpenAI (API key requise)
-- QCM interactives avec choix par clic et correction optionnelle
-- Examen blanc avec chronomètre et correction globale
-- Bank local (qcm_bank.json) et dashboard avec statistiques
-- Interface adaptée pour mobile et desktop
+Application Streamlit pour générer des QCM (concours de résidanat Algérie) en utilisant l'API OpenAI.
 
 ## Installation
-1. `pip install -r requirements.txt`
-2. `streamlit run app.py`
+```bash
+git clone https://github.com/<ton-user>/residanat-qcm.git
+cd residanat-qcm
+pip install -r requirements.txt
+```
+
+## Lancement en local
+```bash
+streamlit run app.py
+```
+
+## Déploiement
+1. Pousser le repo sur GitHub.
+2. Lier avec Streamlit Cloud.
+3. Ajouter `OPENAI_API_KEY` dans `Secrets`.
+
+## Avertissement
+Les QCM générés par IA doivent être vérifiés avant usage pédagogique ou examen.
